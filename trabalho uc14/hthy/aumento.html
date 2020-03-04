@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Questão 3</title>
+</head>
+
+<body>
+	
+	<label for="txtNome">Funcionário:</label>
+	<input id="txtNome" type="text" />
+	<br>
+	<br>
+	<label for="txtCargo">Cargo:</label>
+	<input id="txtCargo" type="text" />
+	<br>
+	<br>
+	
+	<label for="sltCargo">Cargo Select:</label>
+	<select id="sltCargo">
+		<option value="0">Diretor</option>
+		<option value="1">Supervisor</option>
+		<option value="2">Operador</option>
+		<option value="3">Presidente</option>
+		<option value="4">Outro Cargo</option>
+		
+	</select>
+	<br>
+	<br>
+	
+	<label for="txtSalario">Salario:</label>
+	<input id="txtSalario" type="text" />
+	<br>
+	<br>
+	<input type="button" 
+		   onClick="AumentarSalario();" 
+		   value="Dar Aumento" />
+	
+	
+	<script type="text/javascript">
+		
+		function AumentarSalario()
+		{
+			
+			var sal_total = 0;
+			var percentual = 0;
+			var percentual_salario = 0;
+			var aumento = 0;
+			var nome = document.getElementById('txtNome').value;
+			
+			var salario = parseFloat(document.getElementById('txtSalario').value);
+			
+			var cargo = document.getElementById('txtCargo').value;
+			cargo = cargo.toLowerCase();
+			
+			switch(cargo)
+			{
+				case "diretor":
+					aumento = (salario * 0.05); 
+					percentual = 5;
+					
+					break;
+					
+				case "supervisor":
+					aumento = (salario * 0.10); 
+					percentual = 10;
+
+					break;
+					
+				case "operador":
+					aumento = (salario * 0.15); 
+					percentual = 15;
+					
+					break;
+					
+				case "presidente":
+					aumento = (salario * 0.01); 
+					percentual = 1;
+					
+					break;
+					
+				default:
+					aumento = 0;
+					percentual = 0;
+					break;
+			}
+			
+			
+			
+			if(salario < 280){
+			   aumento = aumento + (salario * 0.20);
+				percentual_salario = 20;
+			}
+			else if(salario < 700){
+				aumento = aumento + (salario * 0.15);
+				percentual_salario = 15;
+			}
+			else if(salario < 1500){
+				aumento = aumento + (salario * 0.10);
+				percentual_salario = 10;
+			}
+			else if(salario < 5000){
+				aumento = aumento + (salario * 0.05);
+				percentual_salario = 5;
+			}
+			else{
+				aumento = aumento + 0;
+				percentual_salario = 0;
+			}
+			
+			
+			
+		
+		
+			sal_total = aumento + salario;
+		
+			var textinho = '';
+		
+			textinho = "Nome: "+ nome+ " \n";
+			textinho += "Cargo: "+ cargo + " \n";
+			textinho += "Salario Atual: "+ salario.toFixed(2) + " \n";
+			textinho += "Percentual por Salario: "+ percentual_salario + "% \n";
+			textinho += "Percentual por Cargo: "+ percentual + "% \n";
+			textinho += "Aumento Total: "+ aumento.toFixed(2) + " \n";
+			textinho += "Salario Total: "+ sal_total.toFixed(2) + " \n";
+		
+			window.alert(textinho);
+		
+		}
+		
+	</script>
+	
+	
+	
+	
+	
+	
+</body>
+</html>

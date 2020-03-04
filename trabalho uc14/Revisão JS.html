@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>revisão JS</title>
+</head>
+
+<body>
+	<h1>Produto</h1>
+	<label for="numero1">Digite o primeiro numero : </label>
+	
+	<input type="text" id="numero1"/>
+
+	<br/>
+	
+	<label for="numero2"> Digite o segundo numero  : </label>
+	
+	<input type="text" id="numero2"/>
+	<br/>
+	
+	<label for="resultado">Resultado : </label>
+	
+	<input type="text" id="resultado"/>
+	
+	<br>
+	
+	<input value="produto" type="button" id="somar" onClick="produto();" />
+	
+	
+	
+	
+	
+	<h1>Divisão</h1>
+	<label for="divisa1">Digite o primeiro numero : </label>
+	
+	<input type="text" id="divisa1"/>
+
+	<br/>
+	
+	<label for="divisa2"> Digite o segundo numero  : </label>
+	
+	<input type="text" id="divisa2"/>
+	<br/>
+	
+	<label for="resultadod">Resultado : </label>
+	
+	<input type="text" id="resultadod"/>
+	
+	<br>
+	
+	<input value="dividir" type="button" id="divisao" onClick="divisao();" />
+	
+	
+	<h1>Metade e Dobro</h1>
+	
+	<label for="md">Digite um numero : </label>
+	
+	<input type="text" id="md"/>
+	
+
+	<br/>
+	
+	<label for="metade"> Metade  : </label>
+	
+	<input type="text" id="metade"/>
+	<br/>
+	
+	<label for="dobro"> Dobro : </label>
+	
+	<input type="text" id="dobro"/>
+	
+	<br>
+	
+	<input value="resultado" type="button" id="metaded" onClick="metadedobro();" />
+	
+	<h1>Idade e Nome</h1>
+	
+	<label for="nome">Digite seu nome : </label>
+	
+	<input type="text" id="nome"/>
+	
+
+	<br/>
+	
+	<label for="idade"> digite sua idade : </label>
+	
+	<input type="text" id="idade"/>
+	<br/>
+	
+	<label for="nomea"> Seu nome : </label>
+	
+	<input type="text" id="nomea"/>
+	<br/>
+	<label for="idadea"> idade daqui 30 anos : </label>
+	
+	<input type="text" id="idadea"/>
+	
+	<br>
+	
+	<input value="resultado" type="button" id="idadeb" onClick="idade();" />
+	
+	
+	
+	
+	
+	
+	
+	<h1>Projeto calculadora</h1>
+	
+	<label for="valor1">Digite o primeiro numero : </label>
+	
+	<input type="text" id="valor1"/>
+
+	<br/>
+	
+	<label for="valor2"> Digite o segundo numero  : </label>
+	
+	<input type="text" id="valor2"/>
+	<br/>
+	
+	<label for="somac"> Soma : </label>
+	
+	<input type="text" id="somac"/>
+	
+	<br/>
+	
+	<label for="subtracao">
+		Subtração : </label>
+	
+	<input type="text" id="subtracao"/>
+	
+	<br/>
+	
+	<label for="subtracaoi">Subtração inversa: </label>
+	
+	<input type="text" id="subtracaoi"/>
+	
+	<br/>
+	
+	<label for="produto">Produto : </label>
+	
+	<input type="text" id="produto"/>
+	<br/>
+	<label for="divisac">divisão : </label>
+	
+	<input type="text" id="divisac"/>
+	
+	<br/>
+	
+	<label for="quoc">Quociente : </label>
+	
+	<input type="text" id="quoc"/>
+	
+	<br/>
+	
+	<label for="resto">resto da divisão : </label>
+	
+	<input type="text" id="resto"/>
+	
+	<br/>
+	<input value="calcular" type="button" id="calcu" onClick="calc();" />
+	
+	
+	<h1>Media Alunos</h1>
+	<label for="nota1"> Nota 1 : </label>
+	
+	<input type="text" id="nota1"/>
+	<br/>
+	
+	<label for="nota2"> Nota 2 : </label>
+	
+	<input type="text" id="nota2"/>
+	<br/>
+	<label for="nota3"> Nota 3 : </label>
+	
+	<input type="text" id="nota3"/>
+	<br/>
+	
+	<label for="media"> media : </label>
+	
+	<input type="text" id="media"/>
+	<br/>
+	<input value="media" type="button" id="med" onClick="med();" />
+	
+<script>
+	
+function  produto(){
+	
+var numero1 =document.getElementById('numero1').value;	
+var numero2 = document.getElementById('numero2').value;
+
+var num1 = parseFloat (numero1);
+var num2 = parseFloat (numero2);
+var num3 = 0; 
+	
+num3 = num1 * num2;
+var resultado = document.getElementById('resultado').value = num3; 
+}
+
+	
+	
+function divisao(){
+var divisa1 = document.getElementById('divisa1').value;
+var divisa2 = document.getElementById('divisa2').value;	
+	
+var num1 = parseFloat (divisa1);
+var num2 = parseFloat (divisa2);
+var num3 = 0;
+	
+num3 = num1/num2;
+
+	var resultado = document.getElementById('resultadod').value = num3;
+}	
+	
+function metadedobro(){
+	
+var metade = document.getElementById('md').value;
+
+var num1 = parseFloat(metade)
+var num2 = 0;
+var num3 = 0;	
+
+num2 = num1/2;
+num3 = num1*2;	
+	
+	
+var metader = document.getElementById('metade').value = num2;
+	
+document.getElementById('dobro').value = num3;
+	
+
+}	
+	
+function idade(){
+	
+var nome = document.getElementById('nome').value;
+var idade = document.getElementById('idade').value;
+	
+var idaden = parseFloat (idade);
+	
+idadea = idaden + 30;
+
+var nomea = document.getElementById('nomea').value = nome;	
+	
+var idadena = document.getElementById('idadea').value = idadea;	
+	
+}	
+
+function calc(){
+	
+	var valor1 = document.getElementById('valor1').value;
+	
+	var valor2 = document.getElementById('valor2').value;
+	
+	var n1 = parseFloat(valor1);
+	var n2 = parseFloat(valor2);
+	var n3 = 0;
+	var n4 = 0;
+	var n5 = 0;
+	var n6 = 0;
+	var n7 = 0;
+	
+	var n9 = 0;
+	
+	n3 = n1+n2;
+	n4 = n1-n2;
+	n5 = n2-n1;
+	n6 = n1*n2;
+	n7 = n1/n2;
+   
+	n9 = n1%n2;
+	
+	var n8 = parseInt(n7);
+	
+var n3c = document.getElementById('somac').value = n3;
+	
+var n4c = document.getElementById('subtracao').value = n4;	
+	
+var n5c = document.getElementById('subtracaoi').value = n5;	
+	
+var n6c = document.getElementById('produto').value = n6;	
+
+var n7c = document.getElementById('divisac').value = n7;	
+	
+var n8c = document.getElementById('quoc').value = n8;
+	
+var n9c = document.getElementById('resto').value = n9;	
+}	
+
+	function med() {
+	var vetor = [];	
+	var media = 0;
+    var cont = 0;
+    var soma = 0;
+		
+	for (var i = 0; i < 3; i++)
+	{
+		vetor[i] = parseFloat(document.getElementById('nota'+(i+1)).value);
+		
+		soma += vetor[i]
+		cont = i;
+		
+	}
+	
+		media =  soma /(cont+1);
+		
+		var mediac = document.getElementById('media').value=media.toFixed(2);
+		
+	}
+	
+	</script>	
+</body>
+</html>

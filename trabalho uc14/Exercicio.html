@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Exercicio JS!</title>
+  </head>
+  <body>
+	  <center>
+  <div class="container">
+	  <div id="borda">
+	  <div class="row ">
+	  <div  class="col-md-12 space">
+		 <center><b> Simulador de Financiamento Veículo</b></center>
+		   </div>
+		  </div>
+	  <div class="row ">
+		  <div class="col-sm-4 direita">
+	 *Marca:	  	 	  
+		  </div>
+		  <div class="col-sm-6 esquerda space ">
+			<input class="form-control" type="text" id="marca">    
+		  </div>
+		  </div>
+		  
+		  
+		  <div class="row  ">	  
+		  <div class="col-sm-4  direita space">
+	*Modelo/Versão:	  	 	  
+		  </div>
+		  <div class="col-sm-6 esquerda space">
+			<input  class="form-control" type="text" id="modelo">    
+		  </div>
+		  </div>
+	  
+	  <div class="row  ">	  
+		  <div class="col-sm-4  direita space">
+	 *Ano de modelo:	  	 	  
+		  </div>
+		  <div class="col-sm-3 esquerda space">
+			  <select class="form-control" title="Ano" id="ano">
+				  <option>2012</option>
+				  <option>2013</option>
+				  <option>2014</option>
+				  <option>2015</option>
+				  <option>2016</option>
+				  <option>2017</option>
+			  </select>   
+		  </div>
+		  </div>
+		  
+		  <div class="row  ">	  
+		  <div class="col-sm-4  direita space">
+	 *Ano de Fabricação:	  	 	  
+		  </div>
+		  <div class="col-sm-3 esquerda space">
+			<select class="form-control" title="Ano" id="anof">
+				  <option>2012</option>
+				  <option>2013</option>
+				  <option>2014</option>
+				  <option>2015</option>
+				  <option>2016</option>
+				 <option>2017</option>
+			  </select>       
+		  </div>
+		  </div>
+	  
+	  <div class="row  ">	  
+		  <div class="col-sm-4  direita space">
+	 *Combustível:	  	 	  
+		  </div>
+		  
+		  <div class="col-sm-6 esquerda space">
+			<select class="form-control" title="Ano" id="comb">
+				  <option>Gasolina</option>
+				  <option>Álcool</option>
+				  <option>Flex</option>
+				 
+			  </select>      
+		  </div>
+		  </div>
+	  
+		  <div class="row  ">	  
+		  <div class="col-sm-4  direita space">
+	 *Valor do Veículos:	  	 	  
+		  </div>
+		  <div class="col-sm-6 esquerda space">
+			<input   class="form-control" type="text" id="valorv">    
+		  </div>
+		  </div>
+		  
+		  <div class="row  ">	  
+		  <div class="col-sm-4  direita space">
+	 *Valor de Entrada:	  	 	  
+		  </div>
+		  <div class="col-sm-6 esquerda space">
+			<input  class="form-control" type="text" id="valore">    
+		  </div>
+		  </div>
+		  
+		  <div class="row  ">	  
+		  <div class="col-sm-4  direita space">
+	 *Número de Parcelas:	  	 	  
+		  </div>
+		  
+			 <div class="col-sm-3 esquerda space">
+			<select class="form-control" title="Parcelas" id="parcelas">
+				  
+			  </select>     
+		  </div>
+		  </div>
+		  
+		  <div class="row  ">	  
+		  <div class="col-sm-4  direita space">
+	 *Estado:	  	 	  
+		  </div>
+		  <div class="col-sm-6 esquerda space">
+			<select class="form-control" title="Ano" id="estado">
+				  <option >(ES)	Espírito Santo</option>
+				  <option>(MG)	Minas Gerais</option>
+				  <option>(RJ)	Rio de Janeiro</option>
+				 <option>(SP)	São Paulo</option>
+			  </select>      
+		  </div>
+		  </div>
+	  
+	  
+		  <div class="row  ">	  
+		  <div class="col-sm-4  direita space">
+	   	 	  
+		  </div>
+		  <div class="col-sm-6 esquerda space">
+			  <input type="button" class="form-control" id="calcular"  onClick="clicarMarca();" value="Calcular Parcelas">
+		  </div>
+		  </div>
+	  </div>
+	  </div>
+	  </center>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	 
+	  <script type="text/javascript">
+		  
+		  
+		  //<option value="8"> 8X </option>
+		 var option = '';
+		 for (var i=2 ; i<= 32 ; i++){
+			 option = '<option value="'+ i + '"> '+ i +'X </option>';
+			 $('#parcelas').append(option);
+			 }
+		// document.getElementById('parcelas').innerHTML = option;
+		
+		  
+		  
+		  
+		function clicarMarca(){
+			  var marca = document.getElementById('marca').value;
+		
+		
+
+		
+		  
+			  var modelo = document.getElementById('modelo').value;
+		
+		
+		  
+		  var veiculo = document.getElementById('valorv').value;
+		  var entrada = document.getElementById('valore').value;	   
+			  
+		  var num1 = parseFloat(veiculo);
+		  var num2 = parseFloat(entrada);
+		  var num3 = 0;	  
+		  var num4 = 0;	
+			  
+			  num3 = (num1/100)*10;
+		
+			
+			
+			
+				num4 = num1 - num2;
+				
+			
+		
+		var parc = document.getElementById('parcelas');	  
+		var selec = parc.options[parc.selectedIndex].value;  
+        var num5 = 0;	  
+			  
+		if(selec<=12){
+			num5=num4+(num4/100)*1.34;
+			
+			}
+		else if(selec<=24){
+			num5=num4+(num4/100)*1.89;
+			
+			}	
+			  
+		 else if(selec<=36){
+			num5=num4+(num4/100)*2.04;
+			
+			}	  
+		else {
+			
+			window.alert("Parcelamento Invalido!!");
+			return;
+			
+		}
+		
+			
+		
+		var ano = document.getElementById('ano');	  
+		var selece = ano.options[ano.selectedIndex].value;
+			
+		var anos = document.getElementById('anof');	  
+		var selecee = anof.options[anof.selectedIndex].value;
+			
+		var combust = document.getElementById('comb');	  
+		var seleci = comb.options[comb.selectedIndex].value;
+		
+		var estados = document.getElementById('estado');	  
+		var sel = estado.options[estado.selectedIndex].value;
+		
+		  if (num2<num3) {
+			
+			window.alert("entrada abaixo de 10%!!");
+			  return;
+			
+		}
+		
+			else{
+			
+		window.alert("Marca : " + marca + '\n' + "Modelo : " + modelo + '\n' + "Ano do Modelo : "+ selece +'\n'+"Ano de Fabricação : "+ selecee +'\n'  + "Combustivel : "+ seleci +'\n'+"Valor do veiculo : " + veiculo +'\n'+ "Valor de entrada : " + entrada +'\n' + "Numero de parcelas: " + selec +"X"+'\n'+"Estado : " + sel + '\n' + "O valor do total do carro é : " + num5 )	
+			}
+	  }
+		 
+		 
+	  </script>	  
+	  
+  </body>
+	<style>
+		
+		.backcinza{background-color: #d9d9d9; }
+		.direita{text-align: right;}
+		.esquerda{text-align: left;}
+		.space{padding-bottom: 10px;}
+		#calcular {background-color:red; text-align: center; color:white; margin-top: 10px; padding-bottom: 20px;}
+		#borda{width: 565px; margin-top: 10px;
+		background-color: #d9d9d9; border-radius: 3px;}
+	</style>
+</html>

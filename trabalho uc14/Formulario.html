@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title> Formulario </title>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <h1> Agendamento para banho e tosa </h1>
+	<p> <h2> Faça seu agendamento com pelo menos 48 horas de atecendência </h2> </p>
+	<fieldset id="ident_dono">
+	<legend> Identificação do seu dono </legend>		
+	<form method="post" id="contato" action="obrigado.html">
+	<p> <label for="nome_dono">Nome:</label> <input type="text" name="nome_dono" id="nome_dono" size="50" maxlength="100" placeholder="Digite o nome completo do animal"> </p>
+	<p> <label For="endereco">Endereço:</label> <input type="text" name="endereço" id="endereco" size ="80" maxlength="60" placeholder="Digite o endereço"/> </p>
+	<p> <label for="cep">CEP:</label> <input type="text" name="cep" id="cep" size="10" maxlength="9" placeholder="XXXXXX-XXXX "/> </p>
+	<p> <label for="email_dono">Email:</label> <input type="email" name="email_dono" id="email_dono" size="80" maxlength="60" placeholder="Digite o seu email"> </p>
+	<p> <label for="tel_dono"> tel/cel: </label> <input type="text" name="tel_dono" id="tel_dono" size="25" maxlength="13" placeholder="99 9999-9999"/> </p>
+	
+</form>
+</fieldset>
+
+ <fieldset id="ident_animal" >
+	<legend> animal </legend>
+	 <p> <label for="animal_animal">Nome:</label> <input type="text" name="animal_animal" id="animal_animal" size="50" maxlength="100" placeholder="Digite o nome do animal"> </p>
+ <p> porte do cão :
+ 	<input type="radio" name="porte_animal" id="animal_pequeno" value="animal_pequeno">Pequeno
+ 	<input type="radio" name="porte_animal" id="animal_medio" value="animal_Médio">Médio
+ 	<input type="radio" name="porte_animal" id="animal_grande" value="animal_Grande"> Grande
+ 	
+ 	
+ 	</p>
+ 	<p> Tipo de tosa : <select name="Tipo_tosa" id="Tipo_tosa">
+ 		<option value="" >Nenhuma </option>
+ 		<option value="Padrão" >Padrão </option>
+ 		<option value="Higienica" >Higienica </option>
+ 		<option value="Tesoura" >Tesoura </option>
+ 		<option value="raca"> raca </option>
+ 		<option value="bebe"> tosa bebe </option>
+ 	</select>
+ 	</p>
+	 <p> Observações: <textarea name="q_obs" id="q_obs" placeholder="digite alguma coisa.">                </textarea>
+ 	</p>
+ 	</fieldset>
+ 	<fieldset id="Ident_marcação">
+ 	<legend> Horário - (Não atendemos aos domingos e as segundas-feiras) </legend>
+ 	<p> Indique os dias da semana de sua preferência: <br>
+ 	<input type="Checkbox" name="semana" value="idterca"/> Segunda-Feira
+ 	<input type="Checkbox" name="semana" value="idterca"/> Terça-Feira
+ 	<input type="Checkbox" name="semana" value="idterca"/> Quarta-Feira
+ 	<input type="Checkbox" name="semana" value="idterca"/> Quinta-Feira
+ 	<input type="Checkbox" name="semana" value="idterca"/> Sexta-Feira
+ 	<input type="Checkbox" name="semana" value="idterca"/> Sábado 
+ </p>
+ <p> Primeira opção de horário:
+ <input type="date" name="Pdata" id="Pdata"> </p>
+  <p> Primeira opção de horário:
+  <input type="date" name="Sdata" id="Sdata"> </p>
+
+</fieldset>
+<input type="submit" value="Enviar"/>
+<input type="button" value="clickar" id="btncliclar"/>
+
+	
+	
+	</body>
+
+</html>
+

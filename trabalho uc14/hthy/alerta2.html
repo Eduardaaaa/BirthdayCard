@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Textinho1</title>
+</head>
+<body>
+	<label for="txtNum">Numero:</label>
+	<input type="text" id="txtNum" /><br>
+	
+	<button onClick="Calcular();" type="button">Verificar</button>
+	
+	
+<script type="text/javascript">
+	function Calcular(){
+		
+		var num1 = document.getElementById('txtNum').value;
+		num1 = parseFloat(num1);	
+		var textinho = "";
+	
+
+		if(num1 % 2 == 0) && (num1 % 3 == 0){		   	
+		   	textinho = num1 + " É par e divisível por 3.";
+		}
+		else if(num1 % 2 == 1) && (num1 % 3 == 0){
+			textinho = num1 + " É impar e divisível por 3.";
+		}
+		else if(num1 % 2 == 1) && (num1 % 3 != 0){
+			textinho = num1 + " É impar e não divisível por 3.";
+		}
+		else {
+			textinho = num1 + " É par e não divisível por 3.";
+		}
+		
+		
+//		if(num1 % 2 == 0){
+//		   	if(num1 % 3 == 0){
+//		   		textinho = num1 + " É par e divisível por 3.";
+//			}
+//			else{
+//				textinho = num1 + " É par e não divisível por 3.";
+//			}
+//		}
+//		else {
+//			if(num1 % 3 == 0){
+//		   		textinho = num1 + " É impar e divisível por 3.";
+//			}
+//			else{
+//				textinho = num1 + " É impar e não divisível por 3.";
+//			}
+//		}
+//		
+		window.alert(textinho);
+		
+	}
+	
+</script>
+	
+	
+	
+	
+	
+</body>
+</html>

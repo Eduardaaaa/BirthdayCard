@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+   	  <style>
+		  .altura{
+			 height: 200px; 
+		  }
+			  .cor1{
+				  background-color: #A1CCB6;
+	  
+			  }
+			  .cor2{
+				  background-color:#EF776E; 
+			  }
+			  
+			  .cor3{
+				 background-color: #F9CC6E; 
+			  }
+			  
+			  .cor4{
+				background-color: #9AD5B3;
+				  
+			  }
+	  </style>
+  </head>
+  <body>
+  
+	  <div class="container">
+	   
+		  <form>
+		  
+		 
+		  
+		  <br>
+		  <br>
+		 <div class="row">
+		  	<div class="col-md-1"> 
+				<strong><label for="txtNome">Nome:</label></strong>
+			</div>
+		  	<div class="col-md-11">
+				<input id="txtNome" type="text" class="form-control" />  
+			</div>
+		 </div>
+		  <br>
+		  <br>
+		   <div class="row">
+		  	<div class="col-md-1">
+				<strong><label for="txtEmail">Email:</label></strong>
+			   </div>
+		  	<div class="col-md-5">
+			   <input id="txtEmail" placeholder="Digite seu Email..." type="text" class="form-control" />  
+			</div>
+			<div class="col-md-1">
+			 	<strong><label for="txtTelefone">Telefone:</label> </strong> 
+			 </div>
+		  	<div class="col-md-5">
+			   <input id="txtTelefone" type="text" class="form-control" />  
+			</div>
+		 </div>
+		  
+		  <br>
+		  <br>
+		  
+		  <div class="row">
+		  	<div class="col-md-1"> 
+				<strong><label for="txtEndereco">Endereço:</label></strong>
+			</div>
+		  	<div class="col-md-11">
+				<input id="txtEndereco" type="text" class="form-control" />  
+			</div>
+		 </div>
+		  
+		  <br>
+		  <br>
+		   <div class="row">
+		  	<div class="col-md-1">
+				<strong><label for="txtCidade">Cidade:</label></strong>
+			   </div>
+		  	<div class="col-md-5">
+			   <input id="txtCidade" type="text" class="form-control" />  
+			</div>
+			<div class="col-md-1">
+			 	<strong><label for="sltEstado">Estado:</label>  </strong>
+			 </div>
+		  	<div class="col-md-5">
+			   	<select id="sltEstado" class="form-control">
+					<option value="ES">Espirito Santo</option>
+					<option value="RJ">Rio de Janeiro</option>
+					<option value="MG">Minas Gerais</option>
+					<option value="SP">São Paulo</option>
+					<option value="PR">Paraná</option>
+					<option value="SC">Santa Catarina</option>
+					<option value="RS">Rio Grande do Sul</option>
+				</select> 
+			</div>
+		 </div>
+		  
+			  <br>
+		  <br>
+			  
+		  <div class="row">
+		  	<div class="col-md-5"> 
+		
+			</div>
+		  	<div class="col-md-7">
+				<button type="reset" class="btn btn-info">Limpar</button> 
+				<button type="button" onClick="Cadastrar();" class="btn btn-success">Enviar</button> 
+			</div>
+		 </div>
+		  
+			  <div id="tabela">
+			  
+			  </div>
+			  
+		   
+		  </form>
+		  
+	  </div>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="jquery-3.4.1.slim.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+	  
+	  
+	  <script type="text/javascript">
+	  	
+		  var clientes = [];
+		  
+		  function Cadastrar()
+		  {
+			  var nome = document.getElementById('txtNome').value;
+			  var email = document.getElementById('txtEmail').value;
+			  var telefone = document.getElementById('txtTelefone').value;
+			  var endereco = document.getElementById('txtEndereco').value;
+			  var cidade = document.getElementById('txtCidade').value;
+			  
+			  
+			  var op = document.getElementById('sltEstado');
+			  var estado = op.options[op.selectedIndex].value;
+			  
+			  var cliente = {};
+			  cliente.nome = nome;
+			  cliente.email = email;
+			  cliente.endereco = endereco;
+			  cliente.telefone = telefone;
+			  cliente.estado = estado;
+			  cliente.cidade = cidade;
+			  
+			  
+			  clientes.push(cliente);
+			  
+			  
+			document.getElementById('txtNome').value = "";
+			document.getElementById('txtEmail').value = "";
+			document.getElementById('txtTelefone').value = "";
+			document.getElementById('txtEndereco').value = "";
+			document.getElementById('txtCidade').value = "";
+			  
+			if(clientes.length >= 20){
+			
+			var tabelinha = "";
+			tabelinha += "	<table width='50%' class='table table-hover'>";
+			tabelinha += "    <tr class='table-header'>";
+			tabelinha += "      <th width='20%'><h5>Nome</h5></th>";
+			tabelinha += "      <th width='20%'><h5>Email</h5></th>";
+			tabelinha += "      <th width='20%'><h5>Telefone</h5></th>";
+			tabelinha += "      <th width='20%'><h5>Cidade</h5></th>";
+			tabelinha += "      <th width='20%'><h5>Estado</h5></th>";
+			tabelinha += "    </tr>";
+			
+			for(var i = 0; i < clientes.length; i++)
+			{
+				tabelinha += "<tr>";
+				tabelinha += "<td>"+ clientes[i].nome +"</td>";
+				tabelinha += "<td>"+ clientes[i].email +"</td>";
+				tabelinha += "<td>"+ clientes[i].telefone +"</td>";
+				tabelinha += "<td>"+ clientes[i].cidade +"</td>";
+				tabelinha += "<td>"+ clientes[i].estado +"</td>";
+				tabelinha += "</tr>";
+				
+			}
+			tabelinha += "    </table>";
+			
+			document.getElementById('tabela').innerHTML = tabelinha;
+		}
+			  
+			  
+		  }
+	  
+	  
+	  </script>
+	  
+	  
+	  
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Textinho1</title>
+</head>
+<body>
+	<label for="txtNum1">Numero 1:</label>
+	<input type="text" id="txtNum1" /><br>
+	
+	<label for="txtNum2">Numero 2:</label>
+	<input type="text" id="txtNum2" /><br>
+	
+	<label for="txtNum3">Numero 3:</label>
+	<input type="text" id="txtNum3" /><br><br>
+	
+	<button onClick="Calcular();" type="button">Calcular</button>
+	
+	
+<script type="text/javascript">
+	function Calcular(){
+		
+		var num1 = document.getElementById('txtNum1').value;
+		var num2 = document.getElementById('txtNum2').value;
+		var num3 = document.getElementById('txtNum3').value;
+		
+		num1 = parseFloat(num1);
+		num2 = parseFloat(num2);
+		num3 = parseFloat(num3);
+		
+		var result1 = num1+num2+num3;
+		var result2 = num1*num2*num3;
+		
+		var textinho = "A Soma é: " + result1 + "\n";
+		textinho += "A Multiplicação é: " + result2;
+		
+		window.alert(textinho);
+		
+	}
+	
+</script>
+	
+	
+	
+	
+	
+</body>
+</html>

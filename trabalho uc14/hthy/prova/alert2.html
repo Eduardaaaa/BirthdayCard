@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>calcular a soma e a multiplicação</title>
+</head>
+
+<body>
+<input type="text" id="numero">
+	<button onclick="verifica();">verificar</button>
+	
+	
+	
+	<script>
+	
+function verifica(){
+var num = document.getElementById("numero").value;
+var  int_num = Number(num);
+if(int_num%2 == 0){
+	if(int_num%3 == 0){
+		alert("par e divisivel por 3");
+	}else{
+		alert("par e nao divisivel por 3");
+	}
+}	else{
+	if(int_num%3 == 0){
+		alert("impar e divisivel por 3");
+	} else{
+		alert("impar e nao divisivel por 3");
+	}
+}
+		
+}
+	</script>
+</body>
+</html>

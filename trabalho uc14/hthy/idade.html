@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Questão 2</title>
+</head>
+
+<body>
+	<form>
+	<label for="txtNome">Nome:</label>
+	<input id="txtNome" type="text" />
+	<br>
+	<label for="dtNascimento">Ano Nascimento:</label>
+	<input id="dtNascimento" type="text" />
+	<br>
+	<label for="dtAtual">Ano Atual:</label>
+	<input id="dtAtual" type="text" />
+	<br>
+	
+	<input type="reset" onClick="CalcularIdade();" value="Calcular"/>
+		
+	</form>
+	<script type="text/javascript">
+		
+		function CalcularIdade()
+		{
+			var nome = document.getElementById('txtNome').value;
+			var dataNascimento = document.getElementById('dtNascimento').value;
+			var anoAtual = document.getElementById('dtAtual').value;
+			var idade = parseInt(anoAtual) -parseInt(dataNascimento);
+
+			var textinho = nome + ", Sua Idade é " + (idade-1) + " ou " + idade + " anos.";
+			
+			window.alert(textinho);
+//			
+//			document.getElementById('txtNome').value = "";
+//			document.getElementById('dtNascimento').value = "";
+//			document.getElementById('dtAtual').value = "";
+			
+			
+			
+		}
+		
+	</script>
+	
+	
+	
+	
+</body>
+</html>

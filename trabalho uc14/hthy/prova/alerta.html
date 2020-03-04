@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>calcular a soma e a multiplicação</title>
+</head>
+
+<body>
+<label for="txtnum1">Numero 1:</label>
+<input type="text" id="txtnum1"/>
+<br>
+	<label for="txtnum1">Numero 2:</label>
+<input type="text" id="txtnum2"/>
+<br>
+	<label for="txtnum1">Numero 3:</label>
+<input type="text" id="txtnum3"/>
+	<br>
+	
+   <button style="font-weight: bolder;" ,
+						class="btn btn-danger"
+						onclick="calcular();">
+					
+                    Calcular
+                </button>
+	
+	
+	
+	<script>
+	
+function calcular(){
+var somar1 = document.getElementById('txtnum1').value;
+var somar2 = document.getElementById('txtnum2').value;
+var somar3 = document.getElementById('txtnum3').value;	
+	
+var num1 = parseFloat (somar1);
+var num2 = parseFloat (somar2);
+var num3 = parseFloat (somar3);	
+
+	
+var num4 = num1+num2+num3;
+alert('a soma é '+num4);
+		
+var multiplicar1 = document.getElementById('txtnum1').value;
+var multiplicar2 = document.getElementById('txtnum2').value;
+var multiplicar3 = document.getElementById('txtnum3').value;	
+	
+var num1 = parseFloat (multiplicar1);
+var num2 = parseFloat (multiplicar2);
+var num3 = parseFloat (multiplicar3);	
+
+	
+var num4 = num1*num2*num3;
+alert('a multiplicação é '+num4);
+}
+		
+				
+	</script>
+</body>
+</html>
